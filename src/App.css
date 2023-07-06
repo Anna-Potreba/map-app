@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.form-i {
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 250px;
+}
+.form-i__error {
+  color: red;
+}
