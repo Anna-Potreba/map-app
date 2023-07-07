@@ -6,13 +6,16 @@ import { changeVisibleSidebar } from '../reducers/sidebarReducer';
 export const SideBar = memo(function SideBar() {
     const isShow = useSelector((state) => state.sidebar.isShow)
     const dispatch = useDispatch();
-    const handlerChangeVisibleSidebar = ():void => {
+    const handlerChangeVisibleSidebar = (): void => {
         dispatch(changeVisibleSidebar())
     }
     return (
         <>
-            {!isShow && <button onClick={handlerChangeVisibleSidebar}>Создать новую метку</button>}
-            {isShow && <Form changeVisibleSidebar={handlerChangeVisibleSidebar}/>}
+            <input type="checkbox" id="nav-toggle" checked={isShow} onChange={handlerChangeVisibleSidebar} />
+            <nav className="nav">
+                <label htmlFor="nav-toggle" className="nav-toggle"></label>
+                <Form changeVisibleSidebar={handlerChangeVisibleSidebar} />
+            </nav>
         </>
     )
 });

@@ -72,7 +72,7 @@ export default function Form({ changeVisibleSidebar }) {
                     <label>Adress</label>
                     <input {...register("adress", { required: true })} />
                 </div>
-                {errors.adress && <div className="form-i__error">заполните поле адреса </div>}
+                {errors.adress && <div className="form-i__error">Заполните поле адреса</div>}
                 <div className="form-i">
                     <label>title</label>
                     <select {...register("title")}>
@@ -89,7 +89,9 @@ export default function Form({ changeVisibleSidebar }) {
                         ))}
                     </select>
                 </div>
-                <input type="submit" />
+                <div className="form-i">
+                    <input type="submit" value="Создать метку"/>
+                </div>
             </form>
             }
             <div className="loater">

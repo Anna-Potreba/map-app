@@ -1,11 +1,11 @@
 
 
 
-import './App.css'
 import { useSelector } from 'react-redux'
 import { MapChart } from './components/MapChart';
 import { SideBar } from './components/SideBar';
 import { Warning } from './components/Warning';
+import './App.css'
 
 function App() {
   const markers = useSelector((state) => state.markers.markers)

@@ -3,7 +3,7 @@ import { memo } from "react";
 export const MarkerInfo = memo(function MarkerInfo({ name, descriptions, y }: {name: string, descriptions: string, y: number}) {
     // можно сделать с помощью css, но не с компонентом <text/> 
     const cutText = (title: string): string => {
-        return title.length > 50 ? `${title.slice(0, 50)}…` : title
+        return title.length > 20 ? `${title.slice(0, 20)}…` : title
     }
     return (
         <>
